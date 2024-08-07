@@ -1,0 +1,43 @@
+package java_algorithm_study.greedy;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.StringTokenizer;
+
+public class 모험가길드 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st=new StringTokenizer(bf.readLine());
+		//배열크기입력
+		int n=Integer.parseInt(st.nextToken());
+		int[] arr=new int[n];
+		st=new StringTokenizer(bf.readLine());
+		int currentCnt=0; // 현재 그룹수
+		int result=0; //총 그룹수
+		//배열 입력
+		for(int i=0;i<n;i++) {
+			arr[i]=Integer.parseInt(st.nextToken());
+		}
+		//오름차순 정렬
+		Arrays.sort(arr);
+		//큰수부터 비교
+		for(int i=arr.length-1;i>0;i--) {
+			//현재 들어가있는 인원수
+			currentCnt++;
+			//현재들어가있는 그룺수가 공포도값과 같거나 클 경우
+			if (arr[i]<=currentCnt) {
+				//그룹 갯수 추가
+				++result;
+				//들어가있는 인원수 초기화
+				currentCnt=0;
+			}
+		}
+		System.out.println(result);
+
+	}
+
+}
