@@ -1,30 +1,30 @@
-package ±¸Çö;
+package êµ¬í˜„;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class ¹®ÀÚ¿­ÀçÁ¤·Ä {
+public class ë¬¸ìì—´ì¬ì •ë ¬ {
 
 	public static void main(String[] args) throws IOException {
-		//¹®ÀÚ¿­ Ãß°¡,¼öÁ¤ÇÒ¼öÀÖ´Â ÇÔ¼ö
+		//ë¬¸ìì—´ ì¶”ê°€,ìˆ˜ì •í• ìˆ˜ìˆëŠ” í•¨ìˆ˜
 		StringBuilder sb = new StringBuilder();
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		// String ¹®ÀÚ¿­À»  charÇü ¹è¿­·Î ¹Ù²ãÁÜ =>toCharArray()
+		// String ë¬¸ìì—´ì„  charí˜• ë°°ì—´ë¡œ ë°”ê¿”ì¤Œ =>toCharArray()
 		char[] str;
-		//¹®ÀÚ¿­ ÀÔ·Â¹Ş±â
+		//ë¬¸ìì—´ ì…ë ¥ë°›ê¸°
 		str=br.readLine().toCharArray();
-		//¿À¸§Â÷¼ø Á¤·Ä
+		//ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 		Arrays.sort(str);
-		//ÃÑÇÕ
+		//ì´í•©
 		int sum=0;
 		for(int i=0;i<str.length;i++) {
-			//¼ıÀÚ¸¦ ÆÇ´ÜÇÏ´Â ÇÔ¼ö ¼ıÀÚÀÌ¸é  true  ¾Æ´Ï¸é false
+			//ìˆ«ìë¥¼ íŒë‹¨í•˜ëŠ” í•¨ìˆ˜ ìˆ«ìì´ë©´  true  ì•„ë‹ˆë©´ false
 			if(Character.isDigit(str[i])){
 				sum+=str[i]-'0';
 			}else {
-				//¹®ÀÚ¿­Ãß°¡
+				//ë¬¸ìì—´ì¶”ê°€
 				sb.append(str[i]);
 			}
 		}

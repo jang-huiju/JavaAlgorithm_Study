@@ -6,29 +6,29 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class ¸¸µé¼ö¾ø´Â±İ¾× {
+public class ë§Œë“¤ìˆ˜ì—†ëŠ”ê¸ˆì•¡ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st=new StringTokenizer(bf.readLine());
-		//¹è¿­Å©±â
+		//ë°°ì—´í¬ê¸°
 		int n=Integer.parseInt(st.nextToken());
 		 st=new StringTokenizer(bf.readLine());
-		 //ÃÖ¼Ò°ª
+		 //ìµœì†Œê°’
 		 int result=1;
-		 //¹è¿­ÀÔ·Â
+		 //ë°°ì—´ì…ë ¥
 		 int[] arr=new int[n];
 		 for(int i=0;i<n;i++) {
 			 arr[i]=Integer.parseInt(st.nextToken());
 		 }
-		 //¿À¸§Â÷¼ø Á¤·Ä
+		 //ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 		 Arrays.sort(arr);
 		 for(int i : arr) {
-			 //ÃÖ¼Ú°ªÀÌ iº¸´Ù ÀÛÀ» °æ¿ì 
+			 //ìµœì†Ÿê°’ì´ ië³´ë‹¤ ì‘ì„ ê²½ìš° 
 			 if(result<i) {
 				 break;
 			 }
-			 //¾Æ´Ò°æ¿ì i ´õÇÏ±â
+			 //ì•„ë‹ê²½ìš° i ë”í•˜ê¸°
 			 result+=i;
 		 }
 		 System.out.println(result);

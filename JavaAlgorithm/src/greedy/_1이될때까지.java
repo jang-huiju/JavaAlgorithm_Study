@@ -5,33 +5,32 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class _1ÀÌµÉ¶§±îÁö {
+public class _1ì´ë ë•Œê¹Œì§€ {
 
 	public static void main(String[] args) throws IOException {
 	    BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
 	    StringTokenizer st=new StringTokenizer(bf.readLine());
 	    int n=Integer.parseInt(st.nextToken());
 	    int k=Integer.parseInt(st.nextToken());
-	    //È½¼ö
+	    //íšŸìˆ˜
 	    int count=0;
-	    //ÀÓÀÇ°ª
+	    //ìž„ì˜ê°’
 	    int temp=0;
-	    //nÀÌ 1ÀÌ µÉ¶§±îÁö ¹Ýº¹
+	    //nì´ 1ì´ ë ë•Œê¹Œì§€ ë°˜ë³µ
 	while(n>1) {
-	    //³ª´©¾îÁö°Ô ¸¸µé±â
+	    //ë‚˜ëˆ„ì–´ì§€ê²Œ ë§Œë“¤ê¸°
 	    temp=(n/k)*k;
-	    //³ª¸ÓÁö´Â 1¾¿ »©ÁÖ´Ï±î È½¼ö·Î Ä¡È¯
+	    //ë‚˜ë¨¸ì§€ëŠ” 1ì”© ë¹¼ì£¼ë‹ˆê¹Œ íšŸìˆ˜ë¡œ ì¹˜í™˜
 	    count+=(n-temp);
 	    n=temp;
-	    //k·Î ´õÀÌ»ó ³ª´­¼ö¾øÀ»¶§ break
+	    //kë¡œ ë”ì´ìƒ ë‚˜ëˆŒìˆ˜ì—†ì„ë•Œ break
 	    if(n<k) {
 	        break;
 	    }
-	    //n¸¦ ³ª´©¾î È½¼ö Ãß°¡
+	    //në¥¼ ë‚˜ëˆ„ì–´ íšŸìˆ˜ ì¶”ê°€
 	    n=n/k;
 	    count+=1;
 	}
 	System.out.println(count);
 	}
 	}
-

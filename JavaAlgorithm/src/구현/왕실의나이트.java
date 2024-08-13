@@ -1,27 +1,27 @@
-package ±¸Çö;
+package êµ¬í˜„;
 
 import java.util.Scanner;
 
-public class ¿Õ½ÇÀÇ³ªÀÌÆ® {
+public class ì™•ì‹¤ì˜ë‚˜ì´íŠ¸ {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		//À§Ä¡ÀÔ·Â¹Ş±â
+		//ìœ„ì¹˜ì…ë ¥ë°›ê¸°
 		String str=sc.nextLine();
-		//Ã¼½º¸» ¿òÁ÷ÀÏ¼öÀÖ´Â ÁÂÇ¥
+		//ì²´ìŠ¤ë§ ì›€ì§ì¼ìˆ˜ìˆëŠ” ì¢Œí‘œ
 		int[][] direction= {{-2,-1},{-2,1},{2,-1},{2,1},{-1,-2},{1,-2},{-1,2},{1,2}};
-		//°á°ú°ª : ÀÌµ¿ÇÒ¼öÀÖ´Â °æ¿ìÀÇ ¼ö
+		//ê²°ê³¼ê°’ : ì´ë™í• ìˆ˜ìˆëŠ” ê²½ìš°ì˜ ìˆ˜
 		int result=0;
-		//Çà
+		//í–‰
 		int x=(int)(str.charAt(0)-'a')+1;
-		//¿­
+		//ì—´
 		int y=str.charAt(1)-'0';
 		for(int i=0;i<direction.length;i++) {
-				//¿­
+				//ì—´
 				int col=y+direction[i][1];
-				//Çà
+				//í–‰
 				int row=x+direction[i][0];
-				//¹üÀ§¿¡ ¹ş¾î³ªÁö¾Ê´Â´Ù¸é °æ¿ìÀÇ¼ö +1Ãß°¡
+				//ë²”ìœ„ì— ë²—ì–´ë‚˜ì§€ì•ŠëŠ”ë‹¤ë©´ ê²½ìš°ì˜ìˆ˜ +1ì¶”ê°€
 				if((col>0 && col<=8) &(row>0 && row<=8)) {
 					//System.out.println(col+": "+row);
 					result++;

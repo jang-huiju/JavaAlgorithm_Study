@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Å«¼öÀÇ¹ıÄ¢ {
+public class í°ìˆ˜ì˜ë²•ì¹™ {
 
 	public static void main(String[] args) throws IOException {
 	    BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
@@ -16,25 +16,25 @@ public class Å«¼öÀÇ¹ıÄ¢ {
 	    int k=Integer.parseInt(st.nextToken());
 	    int[] arr=new int[n];
 	    st=new StringTokenizer(bf.readLine());
-	    //¹è¿­ ÀÔ·Â
+	    //ë°°ì—´ ì…ë ¥
 	    for(int i=0;i<n;i++) {
 	        arr[i]=Integer.parseInt(st.nextToken());
 	    }
-	    //¿À¸§Â÷¼ø Á¤·Ä
+	    //ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 	    Arrays.sort(arr);
 	    int first=arr[arr.length-1];
 	    int second=arr[arr.length-2];
 	    int result=0;
-	    //È½¼ö°¡ 0ÀÌ ¾ÈµÉ¶§±îÁö ¹İº¹
+	    //íšŸìˆ˜ê°€ 0ì´ ì•ˆë ë•Œê¹Œì§€ ë°˜ë³µ
 	    while(m!=0) {
-	        //°¡Àå Å«¼ö k ¹ø ´õÇÔ
+	        //ê°€ì¥ í°ìˆ˜ k ë²ˆ ë”í•¨
 	        for(int i=0;i<k;i++) {
 	            result+=first;
 	            m--;
 	        }
-	        //kÈ½¼ö ³ÑÀ¸¸é µÎ¹øÂ°·Î °¡Àå Å«¼ö ÇÑ¹ø ´õÇÏ±â
+	        //kíšŸìˆ˜ ë„˜ìœ¼ë©´ ë‘ë²ˆì§¸ë¡œ ê°€ì¥ í°ìˆ˜ í•œë²ˆ ë”í•˜ê¸°
 	        result+=second;
-	        //ÇÑ¹ø ´õÇÒ¶§¸¶´Ù »©±â
+	        //í•œë²ˆ ë”í• ë•Œë§ˆë‹¤ ë¹¼ê¸°
 	        m--;
 	    }
 	    System.out.println(result);

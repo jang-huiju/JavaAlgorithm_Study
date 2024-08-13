@@ -1,31 +1,31 @@
-package ±¸Çö;
+package êµ¬í˜„;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class °ÔÀÓ°³¹ß {
+public class ê²Œì„ê°œë°œ {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
-		//°¡·Î,¼¼·Î ¹è¿­ Å©±â
+		//ê°€ë¡œ,ì„¸ë¡œ ë°°ì—´ í¬ê¸°
 		StringTokenizer st=new StringTokenizer(bf.readLine());
 		int n=Integer.parseInt(st.nextToken());
 		int m=Integer.parseInt(st.nextToken());
 		
-		//Ã³À½ x,yÁÂÇ¥
+		//ì²˜ìŒ x,yì¢Œí‘œ
 		st=new StringTokenizer(bf.readLine());
 		int x=Integer.parseInt(st.nextToken());
 		int y=Integer.parseInt(st.nextToken());
-		//¹æÇâ
+		//ë°©í–¥
 		int dr=Integer.parseInt(st.nextToken());
 		
 		int[] dx= {-1,0,1,0};
 		int[] dy= {0,1,0,-1};
 		
-		//¹è¿­ÀúÀå
-		//1ÀÏ¶§ ¹Ù´Ù 0ÀÏ¶§ À°Áö
+		//ë°°ì—´ì €ì¥
+		//1ì¼ë•Œ ë°”ë‹¤ 0ì¼ë•Œ ìœ¡ì§€
 		int[][] map=new int[n][m];
 		for(int i=0;i<n;i++) {
 			st=new StringTokenizer(bf.readLine());
@@ -33,18 +33,18 @@ public class °ÔÀÓ°³¹ß {
 				map[i][j]=Integer.parseInt(st.nextToken());
 			}
 		}
-		int[][] visited=new int[n][m]; //0ÀÌ¸é ¹æ¹®X 1ÀÌ¸é ¹æ¹®O
-		//Ã³À½¹æ¹®Ã³¸®
+		int[][] visited=new int[n][m]; //0ì´ë©´ ë°©ë¬¸X 1ì´ë©´ ë°©ë¬¸O
+		//ì²˜ìŒë°©ë¬¸ì²˜ë¦¬
 		visited[x][y]=1;
-		//Ã³À½ ¹æ¹® count Áõ°¡
+		//ì²˜ìŒ ë°©ë¬¸ count ì¦ê°€
 		int count=1;
-		//È¸ÀüÈ½¼ö
+		//íšŒì „íšŸìˆ˜
 		int turnTime=0;
 		while(true) {
 			dr=(dr+3)%4;
 			int nx=x+dx[dr];
 			int ny=y+dy[dr];
-			//È¸Àü ÇÑÈÄ Á¤¸é¿¡ °¡º¸Áö¾ÊÀº Ä­ÀÌ Á¸ÀçÇÏ´Â °æ¿ì ÀÌµ¿
+			//íšŒì „ í•œí›„ ì •ë©´ì— ê°€ë³´ì§€ì•Šì€ ì¹¸ì´ ì¡´ì¬í•˜ëŠ” ê²½ìš° ì´ë™
 			if(visited[nx][ny]==0 && map[nx][ny]==0) {
 				visited[nx][ny]=1;
 				x=nx;
@@ -53,26 +53,26 @@ public class °ÔÀÓ°³¹ß {
 				turnTime=0;
 				continue;
 			}
-			//È¸ÀüÇÑ ÈÄ Á¤¸é¿¡ °¡º¸Áö¾ÊÀº Ä­ÀÌ ¾ø°Å³ª ¹ÙµğÀÎ °æ¿ì
+			//íšŒì „í•œ í›„ ì •ë©´ì— ê°€ë³´ì§€ì•Šì€ ì¹¸ì´ ì—†ê±°ë‚˜ ë°”ë””ì¸ ê²½ìš°
 			else {
 				turnTime++;
 			}
-			//³× ¹æÇâ ¸ğµÎ °¥ ¼ö ¾ø´Ù¸é
+			//ë„¤ ë°©í–¥ ëª¨ë‘ ê°ˆ ìˆ˜ ì—†ë‹¤ë©´
 			if(turnTime==4) {
 				nx=x-dx[dr];
 				ny=y-dy[dr];
-				//µÚ·Î °¥¼öÀÖ´Ù¸é
+				//ë’¤ë¡œ ê°ˆìˆ˜ìˆë‹¤ë©´
 				if(map[nx][ny]==0) {
 					x=nx;
 					y=ny;
-				//µÚ·Î ¹Ù´Ù¶ó¸é
+				//ë’¤ë¡œ ë°”ë‹¤ë¼ë©´
 				}else {
 					break;
 				}
 				turnTime=0;
 			}
 		}
-		//¹æ¹®ÇÑ Ä­ ¼ö
+		//ë°©ë¬¸í•œ ì¹¸ ìˆ˜
 		System.out.println(count);
 	}
 

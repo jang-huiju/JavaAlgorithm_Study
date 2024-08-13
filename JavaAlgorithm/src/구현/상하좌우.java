@@ -1,23 +1,23 @@
-package ±¸Çö;
+package êµ¬í˜„;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class »óÇÏÁÂ¿ì {
+public class ìƒí•˜ì¢Œìš° {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		 //¹è¿­Å©±â ÀÔ·Â
+		 //ë°°ì—´í¬ê¸° ì…ë ¥
 	        int n = Integer.parseInt(br.readLine());
-	        //ÀÔ·ÂÇÑ ¹®ÀÚ °ø¹éÁ¦°Å ÈÄ ¹è¿­¿¡ ÀúÀå
+	        //ì…ë ¥í•œ ë¬¸ì ê³µë°±ì œê±° í›„ ë°°ì—´ì— ì €ì¥
 	        String[] plans = br.readLine().split(" ");
-	        //ÇöÀçÀ§Ä¡ÁÂÇ¥
+	        //í˜„ì¬ìœ„ì¹˜ì¢Œí‘œ
 	        int x = 1, y = 1;
 
-	        int[] dx = {0, 0, -1, 1}; // ÁÂ¿ì»óÇÏ xÁÂÇ¥
-	        int[] dy = {-1, 1, 0, 0}; // ÁÂ¿ì»óÇÏ yÁÂÇ¥
+	        int[] dx = {0, 0, -1, 1}; // ì¢Œìš°ìƒí•˜ xì¢Œí‘œ
+	        int[] dy = {-1, 1, 0, 0}; // ì¢Œìš°ìƒí•˜ yì¢Œí‘œ
 	        String[] moveTypes = {"L", "R", "U", "D"};
 
 	        for (String plan : plans) {
@@ -26,12 +26,12 @@ public class »óÇÏÁÂ¿ì {
 	                    int nx = x + dx[i];
 	                    int ny = y + dy[i];
 
-	                    // ¹üÀ§¸¦ ¹ş¾î³ª¸é ¹«½Ã
+	                    // ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ë©´ ë¬´ì‹œ
 	                    if (nx < 1 || ny < 1 || nx > n || ny > n) {
 	                        continue;
 	                    }
 
-	                    // ÀÌµ¿ ¼öÇà
+	                    // ì´ë™ ìˆ˜í–‰
 	                    x = nx;
 	                    y = ny;
 	                }

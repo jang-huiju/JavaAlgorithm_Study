@@ -5,27 +5,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class º¼¸µ°ø°í¸£±â {
+public class ë³¼ë§ê³µê³ ë¥´ê¸° {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st=new StringTokenizer(bf.readLine());
-		//¹è¿­Å©±âÀÔ·Â
+		//ë°°ì—´í¬ê¸°ì…ë ¥
 		int n=Integer.parseInt(st.nextToken());
-		//°øÀÇ ÃÖ´ë ¹«°Ô
+		//ê³µì˜ ìµœëŒ€ ë¬´ê²Œ
 		int m=Integer.parseInt(st.nextToken());
-		//°æ¿ìÀÇ ¼ö
+		//ê²½ìš°ì˜ ìˆ˜
 		int result=0;
 		int[] arr=new int[n];
 		st=new StringTokenizer(bf.readLine());
-		//¹è¿­ÀÔ·Â
+		//ë°°ì—´ì…ë ¥
 		for(int i=0;i<n;i++) {
 			arr[i]=Integer.parseInt(st.nextToken());
 		}
 		for(int i=0;i<n-1;i++) {
-			//i+1ºÎÅÍ n±îÁö Á¶»ç
+			//i+1ë¶€í„° nê¹Œì§€ ì¡°ì‚¬
 			for(int j=i+1;j<n;j++) {
-			//¹«°Ô°¡ °°Áö¾Ê´Ù¸é ´õÇÏ±â
+			//ë¬´ê²Œê°€ ê°™ì§€ì•Šë‹¤ë©´ ë”í•˜ê¸°
 			if(arr[i]!=arr[j]) {
 				result++;
 			}

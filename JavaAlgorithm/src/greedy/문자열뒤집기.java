@@ -5,27 +5,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class ¹®ÀÚ¿­µÚÁı±â {
+public class ë¬¸ìì—´ë’¤ì§‘ê¸° {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		String str=br.readLine();
-		//¹®ÀÚ¸¦ intÇüÀ¸·Î Ã¹¹øÂ° ¿ø¼Ò
+		//ë¬¸ìë¥¼ intí˜•ìœ¼ë¡œ ì²«ë²ˆì§¸ ì›ì†Œ
 		int n=str.charAt(0)-'0';
-		int count_1=0; //1·Î ¹Ù²Ù´Â °æ¿ì
-		int count_0=0; //0·Î ¹Ù²Ù´Â °æ¿ì
-		if(n=='1') { //Ã¹¹øÂ° ¿ø¼Ò Ã³¸®
+		int count_1=0; //1ë¡œ ë°”ê¾¸ëŠ” ê²½ìš°
+		int count_0=0; //0ë¡œ ë°”ê¾¸ëŠ” ê²½ìš°
+		if(n=='1') { //ì²«ë²ˆì§¸ ì›ì†Œ ì²˜ë¦¬
 			count_0++; 
 		}else {
 			count_1++;
 		}
 		for(int i=0;i<str.length()-1;i++) {
-			// i¹øÂ° ¿ø¼Ò¿Í i+1¿ø¼Ò°¡ °°Áö¾Ê´Ù¸é
+			// ië²ˆì§¸ ì›ì†Œì™€ i+1ì›ì†Œê°€ ê°™ì§€ì•Šë‹¤ë©´
 			if(str.charAt(i)!=str.charAt(i+1)) {
-				//0ÀÏ°æ¿ì 1·Î ¹Ù²Ù´Â È½¼ö Áß°¡
+				//0ì¼ê²½ìš° 1ë¡œ ë°”ê¾¸ëŠ” íšŸìˆ˜ ì¤‘ê°€
 				 if(str.charAt(i+1)=='0') {
 					 count_1++;
-				//1ÀÏ°æ¿ì 0À¸·Î ¹Ù²Ù´Â È½¼ö Áõ°¡
+				//1ì¼ê²½ìš° 0ìœ¼ë¡œ ë°”ê¾¸ëŠ” íšŸìˆ˜ ì¦ê°€
 				 }else {
 					 count_0++;
 				 }

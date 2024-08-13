@@ -1,6 +1,6 @@
 package greedy;
 
-public class ¹«ÁöÀÇ¸Ô¹æ¶óÀÌºê {
+public class ë¬´ì§€ì˜ë¨¹ë°©ë¼ì´ë¸Œ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

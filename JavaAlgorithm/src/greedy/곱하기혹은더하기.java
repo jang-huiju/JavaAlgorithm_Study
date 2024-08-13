@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 ;
 
-public class °öÇÏ±âÈ¤Àº´õÇÏ±â {
+public class ê³±í•˜ê¸°í˜¹ì€ë”í•˜ê¸° {
 
 	public static void main(String[] args){
 		
 		Scanner sc=new Scanner(System.in);
 		String str=sc.nextLine();
-		//°¡ÀåÅ«¼ö
+		//ê°€ì¥í°ìˆ˜
 		int result=1;
 		for(int i=0;i<str.length();i++) {
-			//¼ıÀÚ·Î º¯È¯
+			//ìˆ«ìë¡œ ë³€í™˜
 			int num=str.charAt(i)-'0';
-			//°á°ú°¡ 1ÀÏ¶§ ¼ıÀÚ°¡ 1ÀÌÇÏÀÏ¶§ ´õÇÏ±â
+			//ê²°ê³¼ê°€ 1ì¼ë•Œ ìˆ«ìê°€ 1ì´í•˜ì¼ë•Œ ë”í•˜ê¸°
 			if(num<=1 || num<=1 ) {
 				result+=num;
-			//¾Æ´Ò¶§ °öÇÏ±â
+			//ì•„ë‹ë•Œ ê³±í•˜ê¸°
 			}else {
 				result*=num;
 			}
