@@ -1,11 +1,11 @@
-package 안테나;
+package 정렬;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class 안테나_장희주 {
+public class 안테나 {
 
 	public static void main(String[] args) {
 		

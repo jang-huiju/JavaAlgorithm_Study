@@ -1,9 +1,9 @@
-package 카드정렬하기;
+package 정렬;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-public class 카드정렬하기_장희주 {
+public class 카드정렬하기 {
 
 	public static void main(String[] args) {
 
