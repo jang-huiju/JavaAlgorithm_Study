@@ -1,4 +1,4 @@
-package 게리맨더링;
+package 백준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class 게리맨더링_장희주 {
+public class 게리맨더링 {
 
 	static int N;
 	static int[] sections;
